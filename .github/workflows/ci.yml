@@ -57,7 +57,7 @@ jobs:
     # If all previous steps succeed, upload the artifacts folder
     # This allows subsequent jobs (like deployment) to download and use it
     - name: Upload model artifact
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
         name: model-artifact
         path: artifacts/
@@ -71,7 +71,7 @@ jobs:
     steps:
     # Step 1: Download the model artifact uploaded by the previous job
     - name: Download model artifact
-      uses: actions/download-artifact@v3
+      uses: actions/download-artifact@v4
       with:
         name: model-artifact
         path: artifacts/ # Download to the 'artifacts/' directory in the runner's workspace

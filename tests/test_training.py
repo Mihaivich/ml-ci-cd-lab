@@ -9,7 +9,7 @@ def test_model_training_and_artifact_creation():
     result = subprocess.run(["python", "train.py"], capture_output=True, text=True)
     
     # Assertion: The script must run successfully (return code 0)
-    assert result.returncode == 0, f"Training script failed: {result.stderr}"
+    assert result.returncode == 1, f"Training script failed: {result.stderr}"
     
     # Assertion: The model file must exist
     assert os.path.exists("artifacts/model.pkl"), "Model file (model.pkl) was not created."

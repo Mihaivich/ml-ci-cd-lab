@@ -2,7 +2,7 @@ import subprocess
 import sys
 
 # Define the performance threshold
-PERFORMANCE_THRESHOLD = 0.85 
+PERFORMANCE_THRESHOLD = 0.99
 
 # Run the evaluation script and capture its output (i.e., the accuracy)
 result = subprocess.run(["python", "evaluate.py"], capture_output=True, text=True)
